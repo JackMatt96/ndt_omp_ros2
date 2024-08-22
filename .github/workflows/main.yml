@@ -11,7 +11,7 @@ jobs:
       - name: download wiki
         id: download_wiki
         run: |
-          git clone https://github.com/JackMatt96/ndt_omp_ros2.wiki.git
+          git clone https://saipem.gitlab.host/Weld/sws/sws_2.0_control.wiki.git
       - name: create file list
         id: files_list
         run: |
