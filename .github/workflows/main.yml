@@ -15,7 +15,7 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
+          echo "files=$(printf '"%s" ' *.md)" 
 
       - uses: docker://pandoc/latex:2.9
         with:
