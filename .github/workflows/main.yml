@@ -18,7 +18,7 @@ jobs:
           tree .
           mkdir output  # create output dir
           # this will also include README.md
-          echo "files=$(find . -name '*.md' -print)" > $GITHUB_OUTPUT
+          echo "files=$(printf '"%s" ' ndt_omp_ros2.wiki.git/*/*/*.md)" > $GITHUB_OUTPUT
 
       - uses: docker://pandoc/latex:2.9
         with:
