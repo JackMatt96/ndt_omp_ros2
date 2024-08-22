@@ -15,6 +15,7 @@ jobs:
       - name: create file list
         id: files_list
         run: |
+          tree .
           mkdir output  # create output dir
           # this will also include README.md
           echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
