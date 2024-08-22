@@ -8,10 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: download wiki
+        id: download_wiki
+        run: |
+          git clone https://github.com/JackMatt96/ndt_omp_ros2.wiki.git
       - name: create file list
         id: files_list
         run: |
-          git clone https://github.com/JackMatt96/ndt_omp_ros2.wiki.git
           echo "files=$(printf '"%s" ' *.md)" > $GITHUB_OUTPUT
 
       - uses: docker://pandoc/latex:2.9
